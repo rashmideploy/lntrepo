@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div style="padding:10px" class="col-lg-12 col-md-12 col-sm-12 bg-info text-light">
+      <marquee direction="right">
+        <h2 class="text-center" style="margin:20px">
+          {{title | titlecase}}
+          <!-- {{salary}} -->
+          
+        </h2>
+      </marquee>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <!--placeholder for components navigation-->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div style="margin-top:40%">
+        <img src="assets/images/user.png" style="width:100%" />
+      </div>
+    </div>
+  </div>
+  <br/>
+  <footer>
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <p class="font-weight-bold lead text-danger">
+          This site is copyright &copy; to LTI Technologies {{todaysDate | date:'yyyy'}}.
+          <br/>
+          <span>All rights are reserved here.</span>
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="text-primary text-right ">
+          <h4>{{todaysDate | date:'medium'}}</h4>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

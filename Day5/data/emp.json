@@ -1,0 +1,17 @@
+[{
+		"eid": 101,
+		"name": "Moni",
+		"salary": 40000
+	},
+
+	{
+		"eid": 102,
+		"name": "kruthi",
+		"address": {
+			"city": "Bangalore",
+			"state": "Karnataka"
+		},
+		"salary": 25000
+	}
+
+]

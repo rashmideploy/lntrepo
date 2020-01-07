@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="homework1.css" />
+    <title>Assignment</title>
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btnCalculate').click(function(){
+                var pa=parseFloat($('#txtPA').val());
+                var ny=parseFloat($('#txtNY').val());
+                var roi=parseFloat($('#txtRI').val());
+                var si=pa*ny*roi/100;
+                $('#result').html("Simple Interest is "+si);
+            })
+            //Animation
+            $('div').click(function (){
+                $('#uidiv').hide();
+            })
+        })
+    </script>
+    <script src="homework1.js"></script>
+</head>
+
+<body bgcolor="pink">
+    <h1>
+        <div id="uidiv">
+            <center>
+                <br/>This is my simple Web Application
+                <br/>
+                <br/>
+            </center>
+        </div>
+    </h1>
+    <hr/>
+    <br/>
+
+    <center>
+        <form>
+        <table >
+            <tr>
+                
+                <td class="bold21">Principle Amount: </td>
+                
+                <td>
+                    <input type="text" class="bold21 txt" name="txtPA" id="txtPA" placeholder="Principle Amount" />
+                </td>
+            </tr>
+            <tr>
+                
+                    <td class="bold21">Rate Of Interest:</td>
+                
+                <td>
+                    <input type="text" class="bold21 txt" name="txtRI" id="txtRI" placeholder="Rate of Interest" />
+                </td>
+            </tr>
+            <tr>
+                
+                    <td class="bold21">Number Of Years: </td>
+                
+                <td>
+                    <input type="number" step="2" min="2" max="20" class="bold21 txt" name="txtNY" id="txtNY" placeholder="Number of Years" />
+                </td>
+            </tr>
+            <tr>
+                <td > &nbsp;
+                    <!-- 3buttons 
+                            button ->client
+                            submit ->submit
+                            reset ->clear control -->
+                    <!-- <input type="button" onclick="simpleinterest(txtPA,txtRI,txtNY)" class="bold21 btn btn-success" value="simpleinterest" /> -->
+                    <input type="button" id="btnCalculate" class="bold21 btn btn-success" value="simpleinterest" />
+                                
+                </td>
+
+                <td>
+                    <input type="button" class="bold21 btn btn-danger" onclick="clearAll()" value="Clear" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <h3 id="result" ></h3>
+                </th>
+            </tr>
+        </table>
+    </form>
+    </center>
+</body>
+
+</html>

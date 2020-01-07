@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Json Demo</title>
+</head>
+<body>
+    <h1>Understanding JSON</h1>
+    <hr/>
+    <script>
+        var emp1={};
+        emp1.eid=101;
+        emp1.name="Swati";
+
+        document.write("<h2>Employee ID : " +emp1.eid+"</h2>");
+        document.write("<h2>Employee Name : " +emp1.name+"</h2>");
+
+        var emp2 = {
+                eid: 102, name: "Monisha",
+                address: {
+                    city: "Mumbai",
+                    state: "Maharashtra"
+                },
+                salary: 25000
+            };
+        document.write("<h2>Employee ID : " +emp2.eid+"</h2>");
+        document.write("<h2>Employee Name : " +emp2.name+"</h2>");
+        document.write("<h2>Employee Salary : " +emp2.salary+"</h2>");
+        document.write("<h2>Employee City : " +emp2.address.city+"</h2>");
+        document.write("<h2>Employee State : " +emp2["address"]["state"]+"</h2>");
+
+        var empList =JSON.parse( `[{
+		"eid": 101,
+		"name": "Moni",
+		"salary": 40000
+	},
+
+	{
+		"eid": 102,
+		"name": "kruthi",
+		"address": {
+			"city": "Bangalore",
+			"state": "Karnataka"
+		},
+		"salary": 25000
+	}
+
+]`);
+console.log(empList[0].eid);
+console.log(empList[1].address.city);
+for(var emp of empList){
+    console.log(emp.name+" "+emp.salary);
+}
+var empListString=JSON.stringify(empList);
+console.log(empListString);
+document.write(empListString);
+
+        // var myJSON = JSON.stringify(empList);
+        // window.location = "demo_json.php?x=" + myJSON;
+        // var myObj = JSON.parse(empList);
+        // document.getElementById("demo").innerHTML = myObj.name;
+    </script>
+</body>
+</html>

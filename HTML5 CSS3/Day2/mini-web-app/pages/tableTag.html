@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/commonStyles.css"/>
+    <title>Table Tag</title>
+    <link rel="icon" href="../images/edu1.png"/>
+</head>
+<body>
+    <header>
+        <h1>
+            Table Tag
+        </h1>
+    </header>
+    <h2>Employee Details</h2>
+    <table align="center" border="5" cellpadding="3" cellspacing="1">
+        <caption><h3>Employee Table</h3></caption>
+    <thead>         <!--header is optional-->
+    
+        <tr>
+            <th>EId</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>Moni</td>
+            <th rowspan="2">Developer</th>
+            <td>Rs.50,000</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Kruthi</td>
+            <!-- <td>Developer</td> -->
+            <td>Rs.40,000</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Kichu</td>
+            <th>Tester</th>
+            <td>Rs.50,000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="2">Total Emps : 3</th>
+            <th colspan="2">Total Salary : <mark>Rs.1,40,000</mark></th>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>

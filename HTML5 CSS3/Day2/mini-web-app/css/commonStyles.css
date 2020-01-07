@@ -1,0 +1,39 @@
+/*External CSS*/
+/*paragragh selector with decorators*/
+p{
+    background-color: chocolate;
+    color: bisque;
+    text-transform: uppercase;
+}
+/*Universal Selector*/
+*{
+    font-family: 'Times New Roman';
+}
+
+header{
+    border:5px double chocolate;
+    text-align: center;
+    color: palevioletred;
+    border-radius: 30px;
+    box-shadow:10px 10px 1px pink;
+    width:50%;
+    margin-left: 220px;
+    padding:20px;
+    margin-top: 50px;
+
+}
+img{
+    border-radius: 50px;
+}
+#img1, .boxcolor img[title]{
+    border:5px double green;
+}
+#img2{
+    border:5px double blue;
+}
+.boxcolor{
+    box-shadow:10px 10px 5px rgb(29, 134, 129)
+}
+div h3{
+    color:lightcoral;
+}

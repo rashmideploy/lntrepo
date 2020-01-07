@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>calculator</title>
+    <link rel="stylesheet" href="../css/commonStyles.css" />
+    <link rel="stylesheet" href="../css/calc.css" />
+    <title>Table Tag</title>
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" href="../images/edu1.png" />
+    <script src="../js/calc.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            $('#btnMultiplication').click(function(){
+                var fn=parseFloat($('#txtFN').val());
+                var sn=parseFloat($('#txtSN').val());
+                var si=fn*sn;
+                $('#result').html("Product is "+si);
+            })
+        })
+    </script>
+</head>
+
+
+
+<body>
+    <header>
+        <h1 >
+            Calculator
+        </h1>
+    </header>
+    <hr/>
+    <br/>
+    <!-- <h3>Hello Wolrd Demo</h3>
+    <div>
+        <h3>Hello World</h3>
+    </div> -->
+    <table width="100%" >
+        <tr>
+            <td width="40%">
+                <h1 onmouseover="sayHello()" class="txt-success">JavaScript (JS)</h1>
+                <hr/>
+                <ol>
+                    <li class="bold21 txt-primary" >Inline Javascript</li>
+                    <li class="bold21 txt-primary">Internal or Embedded Javascript</li>
+                    <li class="bold21 txt-primary">External JavaScript</li>
+                </ol>
+                <hr/>
+            </td>
+            <td width="60%">
+                <form name="calcForm" method="post">
+            <table align="center">
+                <tr>
+                    <th colspan="2"><h1 onclick="alert('Welcome')">Calculator..</h1></th>
+                </tr>
+                <tr>
+                    <td class="bold24">First Number: </td>
+                    <td>
+                        <input type="text" required autofocus class="bold24 txt"name="txtFN" id="txtFN" placeholder="First Number"/>
+                    </td>
+                </tr>
+                <tr>
+                        <td class="bold24" >Second Number: </td>
+                        <td>
+                            <input type="text" required class="bold24 txt"name="txtSN" id="txtSN" placeholder="Second Number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="right"> &nbsp;  <!-- 3buttons 
+                            button ->client
+                            submit ->submit
+                            reset ->clear control -->
+                            <!-- <input type="button" onclick="addition(txtFN,txtSN)" class="bold21 btn btn-success"value="Addition"/> -->
+                            <!-- <input type="button" onclick="addition()" class="bold21 btn btn-success"value="Addition"/> -->
+                            <input type="submit" onclick="addition(this.form)" class="bold21 btn btn-success"value="Addition"/>
+                            <input type="button" onclick="subtraction(txtFN,txtSN)" class="bold21 btn btn-success"value="Subtraction"/>
+                            <input type="button" id="btnMultiplication" class="bold21 btn btn-success"value="Multiplication"/>
+                        </td>
+                        
+                        <td>
+                            <input type="reset" class="bold21 btn btn-danger"value="Clear"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <h3 id="result"></h3>
+                        </th>
+                    </tr>
+            </table>
+        </form>
+        </tr>
+    </table>
+    <script>
+            //functions in javascript must follow camelCase
+            function sayHello()
+            {
+                alert('Welcome');
+            }
+        </script>
+</body>
+
+</html>

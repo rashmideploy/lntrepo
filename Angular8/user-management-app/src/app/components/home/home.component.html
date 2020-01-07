@@ -1,0 +1,39 @@
+<br/>
+<br/>
+<!--slice pipe-->
+<!-- Months {{months | slice:3:11}} -->
+<!-- currency pipe, values will be "INR", "USD", "EUR", etc-->
+
+<div class="col-md-12 col-lg-12">
+    <h3 class="text-primary">{{title | uppercase}}</h3>
+    <br/>
+    <h5 class="text-warning">
+        In this demo, we will learn about
+    </h5>
+    <ul class="text-success font-weight-bold">
+        <li>Angular {{64 | sqrt}} Architectuire
+            <ul>
+                <li>Modules</li>
+                <li>Root Component or App Component</li>
+                <li>Types of Data Binding</li>
+                <li>Services and Dependency Injections</li>
+                <li>Directives</li>
+                <li>Pipes</li>
+                <li>Models</li>
+                <li>Routing, etc</li>
+            </ul>
+        </li>
+    </ul>
+    <!--end of ul-->
+    <!-- <a href="/login" class="text-right">
+         <h3> Login..</h3>
+    </a> -->
+
+    <!-- <a [routerLink]="['/login']" class="text-right">
+        <h3> Login..</h3>
+   </a> -->
+
+    <a routerLink="/login" class="text-right">
+        <h3> Login..</h3>
+    </a>
+</div>

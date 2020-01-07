@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Canvas Demo</title>
+</head>
+<body>
+    <h1 align = "center">
+        Drawing Shapes Using Canvas
+    </h1>
+    <hr/>
+    <div align="center">
+    <canvas id="myCanvas" style="border:5px solid grey" width="620px" height="540px"></canvas>
+    </div>
+    <script>
+        var myCanvas=document.getElementById("myCanvas");
+        var context=myCanvas.getContext("2d");
+        context.moveTo(0,0);
+        context.lineTo(620,540);
+        context.stroke();
+
+        context.moveTo(620,0);
+        context.lineTo(0,540);
+        context.stroke();
+
+        context.font="20px Segoe UI";
+        //context.fillText("E-Mail",300,500);
+        context.strokeText("E-Mail",300,500);
+    </script>
+    
+</body>
+</html>

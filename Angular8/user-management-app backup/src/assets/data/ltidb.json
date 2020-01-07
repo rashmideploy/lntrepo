@@ -1,0 +1,20 @@
+[
+        {
+            "id":1,
+            "firstName":"Monisha",
+            "lastName":"M",
+            "age":23,
+            "mobileNumber":"9902146847",
+            "email":"moni@gmail.com",
+            "password":"123456"
+        },
+        {
+            "id":2,
+            "firstName":"Kruthika",
+            "lastName":"M",
+            "age":23,
+            "mobileNumber":"9663075357",
+            "email":"kruthi@gmail.com",
+            "password":"123456"
+        }
+    ]

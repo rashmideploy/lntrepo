@@ -1,0 +1,6 @@
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\bin\LTIDBWCF1Service.dll.config
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\bin\LTIDBWCF1Service.dll
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\bin\LTIDBWCF1Service.pdb
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\obj\Debug\LTIDBWCF1Service.csprojResolveAssemblyReference.cache
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\obj\Debug\LTIDBWCF1Service.dll
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\LTIDBWCF1Service\obj\Debug\LTIDBWCF1Service.pdb

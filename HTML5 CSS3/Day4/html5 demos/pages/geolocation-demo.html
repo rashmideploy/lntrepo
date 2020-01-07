@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Showing User's Location on Google Map</title>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script>
+    function showPosition(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showMap);
+        
+        }else{
+            alert("Sorry ");
+        }
+    }
+
+    function showMap(position){
+        lat=position.coords.latitude;
+        long=position.coords.longitude;
+        var latlong=new google.maps.LatLng(lat,long);
+        console.log(lat,'',long);
+        var myOptions={
+            center:latlong,
+            zoom:16,
+            mapTypeControl:true,
+            navigationControlOptins:{
+                style:google.maps.NavigationControlStyle.SMALL
+            }
+        }
+        var map=new google.maps.Map(document.getElementById("embedMap"),myOptions)
+        var marker=new google.maps.Marker({
+            position:latlong,map:map, title:"You are here!" });
+    }
+    </script>
+</head>
+<body>
+    <h1>Geolocation Example - Showing live location with marker</h1><br/>
+    <button type="button" onclick="showPosition();">Show My Position on Google Map</button>
+    <div id="embedMap" style="width:400px; height:300px;"></div>
+</body>
+</html>

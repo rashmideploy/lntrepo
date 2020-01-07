@@ -1,0 +1,92 @@
+Html File
+---------------------------------------------------------------------------------------------------------------------
+
+<div>
+
+            <div class="col-lg-6">
+                <div class="form-group" style="margin-top:5%">
+                    <label for="firstName" class="font-weight-bold text-primary">
+                        Search City:
+                    </label>
+                    <input type="text" class="form-control" [(ngModel)]="searchCity" />
+                    <h4>
+                        Searching for {{searchCity}}
+                    </h4>
+                    <button type="submit" (click)="searchByCity()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+<br/>
+               
+            <h5 >Temperature:{{weatherData.main.temp}}</h5>
+            <h5>Humidity:{{weatherData.main.humidity}}</h5>
+            <h5>Pressure:{{weatherData.main.pressure}}</h5>
+            <h5>Description:{{weatherData.weather[0].description}}</h5>
+
+
+
+
+
+
+
+Ts File
+-------------------------------------------------------------------------------------------------------------------------------
+
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-weather',
+  templateUrl: './weather.component.html',
+  styleUrls: ['./weather.component.css']
+})
+export class WeatherComponent implements OnInit {
+
+  weatherData ;
+  searchCity: any;
+//  form1: FormGroup;
+//   submitted: boolean = false;
+  constructor(private formBuilder: FormBuilder,private apiService: ApiService) { }
+
+  ngOnInit() {
+   
+  }
+
+  searchByCity(){
+    this.apiService.searchByCity(this.searchCity).subscribe((data) => {
+      console.log(data);
+          
+      this.weatherData = data;
+      
+      
+    })
+
+  }
+
+}
+
+
+Service File
+-----------------------------------------------------------------------------------------------------------------------
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
+
+  //Service class to call api
+  API_KEY = '8fe3f4565860952da11e31db6d4aa8a4';
+  //City=""
+  constructor(private httpClient: HttpClient) { }
+   searchByCity(searchCity){
+     console.log(searchCity)
+    
+    return this.httpClient.get(`http://api.openweathermap.org/data/2.5/weather?q=${searchCity}&apiKey=${this.API_KEY}`);
+
+  }
+}

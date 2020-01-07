@@ -1,0 +1,6 @@
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\bin\CalcWebService.dll.config
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\bin\CalcWebService.dll
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\bin\CalcWebService.pdb
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\obj\Debug\CalcWebService.csprojResolveAssemblyReference.cache
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\obj\Debug\CalcWebService.dll
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CalcWebService\obj\Debug\CalcWebService.pdb

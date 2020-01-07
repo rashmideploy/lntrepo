@@ -1,0 +1,23 @@
+div{
+    background-color: rgb(196, 143, 196);
+}
+.bold21{
+    font-weight: bold;
+    font-size: 21px;
+}
+.txt{
+    border-radius: 10px;
+    color:rgb(124, 73, 7);
+    text-align: center;
+}
+.btn{
+    color:white;
+    border-radius: 30px 10px;
+    padding: 5px 20px;
+}
+.btn-danger{
+    background-color:rgb(212, 74, 74)
+}
+.btn-success{
+    background-color:rgb(3, 136, 3)
+}

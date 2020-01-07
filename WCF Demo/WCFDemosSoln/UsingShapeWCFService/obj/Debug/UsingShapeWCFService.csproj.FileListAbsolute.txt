@@ -1,0 +1,6 @@
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\bin\Debug\UsingShapeWCFService.exe.config
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\bin\Debug\UsingShapeWCFService.exe
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\bin\Debug\UsingShapeWCFService.pdb
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\obj\Debug\UsingShapeWCFService.csprojResolveAssemblyReference.cache
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\obj\Debug\UsingShapeWCFService.exe
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\UsingShapeWCFService\obj\Debug\UsingShapeWCFService.pdb

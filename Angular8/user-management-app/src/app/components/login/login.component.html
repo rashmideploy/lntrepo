@@ -1,0 +1,52 @@
+<br/> <br/>
+<div class="col-lg-8 col-md-8">
+    <h3 class="text-success">Login</h3>
+    <br/>
+    
+    <!--identification of reactive form-->
+    <form [formGroup]="loginForm"(ngSubmit)="verifyLogin()">
+        <!--Email Address-->
+        <!--dont use html5 validations, coz they are not consistent...hence use angular validations-->
+        <div class="form-group">
+            <label for="email" class="font-weight-bold">
+                Email Address : 
+            </label>
+            <input type="email"  class="form-control" placeholder="Email Address" maxlength="60" formControlName="email" />
+            <div *ngIf="submitted && loginForm.controls.email.errors">
+                <div class="alert alert-danger"
+                *ngIf="loginForm.controls.email.errors.required">
+                Email Id is required..!
+            </div>
+            <div class="alert alert-danger"
+                *ngIf="loginForm.controls.email.errors.email">
+                Invalid Email Id..!
+            </div>
+            </div>
+        </div>
+        <!-- Password-->
+        <div class="form-group">
+            <label for="password" class="font-weight-bold">
+                Password : 
+            </label>
+            <input type="password"  class="form-control" placeholder="Password" maxlength="15" formControlName="password" />
+            <div *ngIf="submitted && loginForm.controls.password.errors">
+                    <div class=" alert alert-danger"
+                    *ngIf="loginForm.controls.password.errors.required">
+                    Password is required..!
+                </div>
+                </div>
+        </div>
+        <button class="btn btn-outline-success">Login</button>
+        &nbsp;
+        <button class="btn btn-outline-danger" type="reset">Cancel</button> &nbsp;
+        <!--routerLink directive is an eg. of Attribute or Property Binding-->
+        <a class="btn btn-warning" routerLink="/home">Go to home</a>
+        <br/>
+        <br/>
+        <div class="error">
+            <div class="text-danger" *ngIf="invalidLogin">
+                Invalid Email or Password...!
+            </div>
+        </div>
+    </form>
+</div>

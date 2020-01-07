@@ -1,0 +1,6 @@
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\bin\Debug\CustomerApplication.exe.config
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\bin\Debug\CustomerApplication.exe
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\bin\Debug\CustomerApplication.pdb
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\obj\Debug\CustomerApplication.csprojResolveAssemblyReference.cache
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\obj\Debug\CustomerApplication.exe
+D:\Microsoft Training\Web Technologies\WCF Demo\WCFDemosSoln\CustomerApplication\obj\Debug\CustomerApplication.pdb

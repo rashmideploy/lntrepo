@@ -1,0 +1,124 @@
+<br/><br/>
+<div class="col-md-10 col-lg-10">
+    <h1>Add User</h1>
+    <br/>
+
+    <!--Template Driven Forms-->
+    <!-- Identification of template driven #,ngform,ngModel-->
+    <!--dependency module name for template driven FormsModule-->
+    <!-- <form #addForm="ngForm" (ngSubmit)="addUser()">
+        <div class="form-group row">
+            <label for="firstName" class="col-lg-4 font-weight-bold">
+                First Name:
+            </label>
+            <input type="text" class="col-lg-8 form-control" id="firstName" name="firstName" #firstName="ngModel" ngModel required pattern="[A-Z][a-z]{3,25}"
+                placeholder="First Name" /> -->
+            <!-- Template driven validations-->
+            <!-- <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                <div *ngIf="firstName.errors?.pattern">
+                    First Name should begin with Cpaital Letters and Length should be [Minimum 4 and 26 ]..!
+                </div>
+            </div>
+            <button [disabled]="addForm.invalid" class="btn btn-success">Add User</button>
+        </div>
+    </form> -->
+    <!--Reactive forms-->
+    <!--Designing Add User Form-->
+    <!-- [FormGroup]="addForm" (ngSubmit)="addUser()" -->
+    <form [formGroup]="addForm" (ngSubmit)="addUser()"> 
+         <div class="form-group row">
+            <label for="firstName" class="col-lg-4 font-weight-bold">
+                First Name: 
+            </label>
+            <input type="text" class ="col-lg-8 form-control" formControlName="firstName" id="firstName" maxLength="26"/>
+        
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.firstName.errors">
+                <div *ngIf="addForm.controls.firstName.errors.required">
+                    First Name is required..!
+                </div>
+                <div *ngIf="addForm.controls.firstName.errors.pattern">
+                    First Name must begin with capital letters and minimum 4 and max 26 characters
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="lastName" class="col-lg-4 font-weight-bold">
+                Last Name: 
+            </label>
+            <input type="text" class ="col-lg-8 form-control" formControlName="lastName" id="lastName" maxLength="26" />
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.lastName.errors">
+                <div *ngIf="addForm.controls.lastName.errors.required">
+                    Last Name is required..!
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="age" class="col-lg-4 font-weight-bold">
+                Age: 
+            </label>
+            <input type="number" class ="col-lg-8 form-control" formControlName="age" id="age" />
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.age.errors">
+                <div *ngIf="addForm.controls.age.errors.required">
+                    First Name is required..!
+                </div>
+                <div *ngIf="addForm.controls.age.errors.min || addForm.controls.age.errors.max">
+                    Age must be between 20 and 30
+                </div>
+                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="mobileNumber" class="col-lg-4 font-weight-bold">
+                Mobile Number:
+            </label>
+            <input type="text" class ="col-lg-8 form-control" formControlName="mobileNumber" id="mobileNumber" maxLength="10" />
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.mobileNumber.errors">
+                <div *ngIf="addForm.controls.mobileNumber.errors.required">
+                   Mobile Number is required..!
+                </div>
+                <div *ngIf="addForm.controls.mobileNumber.errors.pattern">
+                    Mobile Number must start with 6, 7 , 8 or 9 and must have 10 digits
+                </div>
+                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="email" class="col-lg-4 font-weight-bold">
+                Email: 
+            </label>
+            <input type="email" class ="col-lg-8 form-control" formControlName="email" id="email" maxLength="60"/>
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.email.errors">
+                <div *ngIf="addForm.controls.email.errors.required">
+                   Email is required..!
+                </div>
+                <div *ngIf="addForm.controls.email.errors.email">
+                    Invalid Email Id..!
+                </div>
+                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="password" class="col-lg-4 font-weight-bold">
+                Password: 
+            </label>
+            <input type="password" class ="col-lg-8 form-control" formControlName="password" id="password"  />
+            <div class="offset-lg-4 col-lg-8 error alert alert-danger" *ngIf="submitted && addForm.controls.password.errors">
+                <div *ngIf="addForm.controls.password.errors.required">
+                   Password is required..!
+                </div>
+                </div>
+        </div>
+
+        <div class="text-right">
+            <button class="btn btn-outline-success">Save</button>
+            &nbsp; &nbsp;
+
+            <button type="reset" class="btn btn-outline-danger">Cancel</button>
+            &nbsp; &nbsp;
+
+            <a class="btn btn-warning" routerLink="/list-user">Back To List</a>
+        </div>
+     </form>
+</div> 

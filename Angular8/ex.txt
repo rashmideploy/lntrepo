@@ -1,0 +1,29 @@
+GET getAllUsers():http://localhost:3000/users
+
+GET getUserById(id) :http://localhost:3000/users/1
+
+POST addUser(user) : http://localhost:3000/users
+
+
+{
+    "firstName": "Leela",
+    "lastName": "C",
+    "age": 23,
+    "mobileNumber": "9678775357",
+    "email": "leelai@gmail.com",
+    "password": "123456"
+}
+
+PUT updateUser(id,user) : http://localhost:3000/users/4
+{
+    "id":4,
+    "firstName": "Leela",
+    "lastName": "C",
+    "age": 23,
+    "mobileNumber": "9678795357",
+    "email": "leelavathi@gmail.com",
+    "password": "1234567"
+}
+
+
+DELETE deleteUser(id) : http://localhost:3000/users/4

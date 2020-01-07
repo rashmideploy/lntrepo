@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <link rel="stylesheet" href="homework1.css"/>
+    <title>Assignment</title>
+    <div id="counter"></div>
+    <script src="homework1.js"></script>
+    <script src="loginscript.js"></script>
+</head>
+<script>
+    function countHits(){
+        if(localStorage.hitscount){
+            localStorage.hitscount=Number(localStorage.hitscount)+1;
+        }
+        else{localStorage.hitscount=1;}
+    }
+
+    // function countRefresh(){
+    //     if(localStorage.refreshCount){
+    //         localStorage.refreshCount=(Number)(localStorage.refreshCount)+1;
+    //     }
+    //     else
+    //         localStorage.refreshCount=1;
+    //         document.getElementById("refreshCount").innerHTML=localStorage.refreshCount;
+    // }
+</script>
+<script>
+    var n = localStorage.getItem('on_load_counter');
+     
+    if (n === null) {
+        n = 0;
+    }
+     
+    n++;
+     
+    localStorage.setItem("on_load_counter", n);
+     
+    document.getElementById('counter').innerHTML ="Refresh Count: "+ n;
+    </script>
+<body bgcolor="pink">
+
+    <h1>
+        <div><center>
+            <br/>This is my simple Web Application<br/>
+        <br/></center></div>
+    </h1>
+    <hr/>
+    <br/>
+    <h2>
+    <center>Click here for <a href="login.html" target="login">Login</a>
+        <a href="https://google.com" target="login">Google</a>
+        <button onclick="countHits()">Hit Count</button>
+        <!-- <h2 id="refreshCount"></h2> -->
+        <br/>
+        
+    <hr/>
+        <iframe name="login" width="520px" height="420px">
+
+        </iframe>
+    </center>
+    </h2>
+</body>
+</html>

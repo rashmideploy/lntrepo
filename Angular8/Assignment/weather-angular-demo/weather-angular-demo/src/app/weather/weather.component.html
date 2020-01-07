@@ -1,0 +1,44 @@
+<body backgroundcolor="pink"><div>
+
+            <div class="col-lg-6">
+                <div class="form-group" style="margin-top:5%">
+                    <label for="firstName" class="font-weight-bold text-primary">
+                        Search City:
+                    </label>
+                    <input type="text" class="form-control" [(ngModel)]="searchCity" />
+                    <h4>
+                        Searching for {{searchCity}}
+                    </h4>
+                    <button type="submit" (click)="searchByCity()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+<br/>
+               
+            <h5>Temperature:{{weatherData.main.temp}}</h5>
+            <h5>Humidity:{{weatherData.main.humidity}}</h5>
+            <h5>Pressure:{{weatherData.main.pressure}}</h5>
+            <h5>Description:{{weatherData.weather[0].description}}</h5>
+
+
+            <hr/>
+            <button (click)="getEmps()">Get Employee</button>
+
+            <table>
+                <tr *ngFor="let emp of emps">
+                    <th>{{emp.employee_name}}</th>
+                    <th>{{emp.id}}</th>
+                </tr>
+            </table>
+         </body>
+
+
+                   
+            
+   
+
+
+
+
+

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcWebService", "CalcWebService\CalcWebService.csproj", "{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCalcWebService", "UsingCalcWebService\UsingCalcWebService.csproj", "{88E3A1F8-ECF0-4352-BA00-65ACB2201248}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E} = {BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeWCFService", "ShapeWCFService\ShapeWCFService.csproj", "{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingShapeWCFService", "UsingShapeWCFService\UsingShapeWCFService.csproj", "{7E8FD712-F6F2-479C-B316-645D985DB9A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717} = {57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTIDBWCF1Service", "LTIDBWCF1Service\LTIDBWCF1Service.csproj", "{20FA5556-21E2-4887-9436-CEF6FB4A62D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerApplication", "CustomerApplication\CustomerApplication.csproj", "{05D7C47A-3714-4708-A4E8-69019C78D946}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20FA5556-21E2-4887-9436-CEF6FB4A62D0} = {20FA5556-21E2-4887-9436-CEF6FB4A62D0}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC89EFC7-5F4D-4D52-9C60-902FD3DEB53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E3A1F8-ECF0-4352-BA00-65ACB2201248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E3A1F8-ECF0-4352-BA00-65ACB2201248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E3A1F8-ECF0-4352-BA00-65ACB2201248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E3A1F8-ECF0-4352-BA00-65ACB2201248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BEFAEF-8D13-4C09-BC99-FEA31F3E5717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E8FD712-F6F2-479C-B316-645D985DB9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8FD712-F6F2-479C-B316-645D985DB9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8FD712-F6F2-479C-B316-645D985DB9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8FD712-F6F2-479C-B316-645D985DB9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FA5556-21E2-4887-9436-CEF6FB4A62D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FA5556-21E2-4887-9436-CEF6FB4A62D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FA5556-21E2-4887-9436-CEF6FB4A62D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FA5556-21E2-4887-9436-CEF6FB4A62D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D7C47A-3714-4708-A4E8-69019C78D946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D7C47A-3714-4708-A4E8-69019C78D946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D7C47A-3714-4708-A4E8-69019C78D946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D7C47A-3714-4708-A4E8-69019C78D946}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

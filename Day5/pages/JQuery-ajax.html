@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.ajax({
+                    url: "../data/mydetails.txt",
+                    success: function (result) {
+                        $("#div1").html(result);
+                    },
+                    error: function (err) {
+                        // 
+                        alert(err.stack);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <marquee>
+            <h1>Understanding Ajax</h1>
+        </marquee>
+    </div>
+    <div id="div1">
+        <h2>Welcome to Jquery Ajax</h2>
+    </div>
+    <button>Read From File</button>
+</body>
+
+</html>
